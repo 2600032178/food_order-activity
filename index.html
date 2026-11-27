@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Plateful: browse nearby restaurants, explore food categories and view menus for fast food delivery.">
+<meta name="theme-color" content="#1b2440">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2750%27 fill=%27%23f2b02e%27/%3E%3C/svg%3E">
+<title>Plateful – Restaurants near you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="#" aria-label="Plateful home"><span aria-hidden="true">P</span>Plateful</a>
+    <div class="actions">
+      <button class="btn ghost" type="button">Sign in</button>
+      <button class="btn" type="button">Cart (0)</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#restaurants" aria-current="page">Restaurants</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#help">Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Hot food, at your door.</h1>
+    <p>Browse local restaurants, pick a cuisine and see what is on the menu tonight.</p>
+    <form class="search" role="search" onsubmit="return false">
+      <input type="search" placeholder="Search restaurants or dishes" aria-label="Search restaurants or dishes">
+      <button class="btn" type="submit">Search</button>
+    </form>
+  </section>
+
+  <section class="section" id="categories" aria-labelledby="cat-h">
+    <h2 id="cat-h">What are you craving?</h2>
+    <ul class="chips">
+      <li><button class="chip" aria-pressed="true">🍽️ All</button></li>
+      <li><button class="chip" aria-pressed="false">🍕 Pizza</button></li>
+      <li><button class="chip" aria-pressed="false">🍔 Burgers</button></li>
+      <li><button class="chip" aria-pressed="false">🍛 Biryani</button></li>
+      <li><button class="chip" aria-pressed="false">🍜 Noodles</button></li>
+      <li><button class="chip" aria-pressed="false">🥗 Healthy</button></li>
+      <li><button class="chip" aria-pressed="false">🍰 Desserts</button></li>
+    </ul>
+  </section>
+
+  <section class="section" id="restaurants" aria-labelledby="rest-h">
+    <h2 id="rest-h">Restaurants near you</h2>
+    <ul class="grid">
+
+      <li class="cell featured"><a class="card" href="#">
+        <div class="thumb" style="background:linear-gradient(135deg,#ffd9a0,#f2b02e)"><span class="badge">20% off</span><span aria-hidden="true">🍛</span></div>
+        <div class="body">
+          <div class="row"><h3>Spice Route Kitchen</h3><span class="rating">★ 4.6</span></div>
+          <p class="meta">Biryani · Andhra · 30 min · ₹250 for two</p>
+          <p class="desc">Dum biryani cooked in sealed pots, plus guntur-style starters and a rotating thali.</p>
+          <span class="order">View menu</span>
+        </div></a></li>
+
+      <li class="cell"><a class="card" href="#">
+        <div class="thumb" style="background:linear-gradient(135deg,#ffc4bd,#d6372b)"><span aria-hidden="true">🍕</span></div>
+        <div class="body">
+          <div class="row"><h3>Fire &amp; Crust</h3><span class="rating">★ 4.4</span></div>
+          <p class="meta">Pizza · Italian · 25 min · ₹400 for two</p>
+          <p class="desc">Wood-fired, thin-crust pizzas with a 48-hour dough.</p>
+          <span class="order">View menu</span>
+        </div></a></li>
+
+      <li class="cell"><a class="card" href="#">
+        <div class="thumb" style="background:linear-gradient(135deg,#d3ecdf,#2f7d5b)"><span aria-hidden="true">🥗</span></div>
+        <div class="body">
+          <div class="row"><h3>Green Bowl Co.</h3><span class="rating">★ 4.5</span></div>
+          <p class="meta">Healthy · Salads · 20 min · ₹300 for two</p>
+          <p class="desc">Build-your-own grain bowls and cold-pressed juices.</p>
+          <span class="order">View menu</span>
+        </div></a></li>
+
+      <li class="cell"><a class="card" href="#">
+        <div class="thumb" style="background:linear-gradient(135deg,#cfd6ee,#1b2440)"><span aria-hidden="true">🍜</span></div>
+        <div class="body">
+          <div class="row"><h3>Noodle Lane</h3><span class="rating">★ 4.2</span></div>
+          <p class="meta">Noodles · Asian · 35 min · ₹350 for two</p>
+          <p class="desc">Hand-pulled noodles, dumplings and hot-and-sour soups.</p>
+          <span class="order">View menu</span>
+        </div></a></li>
+
+      <li class="cell"><a class="card" href="#">
+        <div class="thumb" style="background:linear-gradient(135deg,#ffe6b8,#e8863a)"><span aria-hidden="true">🍔</span></div>
+        <div class="body">
+          <div class="row"><h3>Stack House</h3><span class="rating">★ 4.3</span></div>
+          <p class="meta">Burgers · American · 22 min · ₹280 for two</p>
+          <p class="desc">Smashed patties, loaded fries and thick shakes.</p>
+          <span class="order">View menu</span>
+        </div></a></li>
+
+      <li class="cell"><a class="card" href="#">
+        <div class="thumb" style="background:linear-gradient(135deg,#f9d3e3,#c2457d)"><span class="badge">New</span><span aria-hidden="true">🍰</span></div>
+        <div class="body">
+          <div class="row"><h3>Sugar &amp; Salt</h3><span class="rating">★ 4.7</span></div>
+          <p class="meta">Desserts · Bakery · 28 min · ₹200 for two</p>
+          <p class="desc">Fresh cakes, warm brownies and filter coffee.</p>
+          <span class="order">View menu</span>
+        </div></a></li>
+
+      <li class="cell"><a class="card" href="#">
+        <div class="thumb" style="background:linear-gradient(135deg,#e1f0c9,#7aa63a)"><span aria-hidden="true">🌮</span></div>
+        <div class="body">
+          <div class="row"><h3>Taco Tuesday</h3><span class="rating">★ 4.1</span></div>
+          <p class="meta">Mexican · Wraps · 32 min · ₹320 for two</p>
+          <p class="desc">Soft tacos, burrito bowls and house-made salsas.</p>
+          <span class="order">View menu</span>
+        </div></a></li>
+
+      <li class="cell"><a class="card" href="#">
+        <div class="thumb" style="background:linear-gradient(135deg,#d9d3f3,#6a4fc4)"><span aria-hidden="true">🍢</span></div>
+        <div class="body">
+          <div class="row"><h3>Tandoor Tales</h3><span class="rating">★ 4.4</span></div>
+          <p class="meta">North Indian · Grill · 38 min · ₹450 for two</p>
+          <p class="desc">Charcoal-grilled kebabs, butter naan and rich gravies.</p>
+          <span class="order">View menu</span>
+        </div></a></li>
+
+    </ul>
+  </section>
+</main>
+
+<footer class="footer" id="help">
+  <div class="section">
+    <strong>Plateful</strong>
+    <span>Delivery 10 am – 11 pm · help@plateful.example</span>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  // Category chip selection (visual state only)
+  document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
+    document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c === chip));
+  }));
+</script>
+</body>
+</html>
